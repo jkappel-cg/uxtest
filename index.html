@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Front Page — The Intelligence Desk</title>
+<meta name="description" content="The CarGurus competitive intelligence front page: pressure, gaps, signals, and what they mean for CarGurus.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="page-shell" id="pageShell">
+<div class="site-header">
+  <div class="topbar">
+    <div class="wordmark"><img class="logo-img" src="cargurus-logo.svg" alt="CarGurus"></div>
+    <div class="hdr-divider"></div>
+    <div class="hdr-title serif">Comp Intel Desk</div>
+    <div class="right-group">
+      <span class="meta">Oct 8, 2026</span>
+      <span class="meta live-dot"><span class="dot"></span>Monitoring</span>
+      <div class="nav-actions">
+        <button class="btn-alerts" data-open-alerts>Get alerts</button>
+        <button class="btn-tip" data-open-tip>Share a tip</button>
+      </div>
+    </div>
+  </div>
+  <div class="ticker">
+    <div class="ticker-label">Signal</div>
+    <div class="ticker-scroll"><div class="ticker-track" id="tickerTrack"></div></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="chat-teaser card-surface clickable" id="chatTeaserCard" data-open-chat>
+    <h3>Ask the Comp Intel Desk</h3>
+    <div class="teaser-search-bar">
+      <input type="text" id="teaserSearchInput" class="teaser-search-input" placeholder="Ask about a competitor, a change, or a capability…">
+      <button type="button" id="teaserSearchBtn" class="teaser-search-icon-btn" aria-label="Ask the desk">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="7"/><line x1="16" y1="16" x2="21.5" y2="21.5"/></svg>
+      </button>
+    </div>
+    <div class="teaser-try-row">
+      <span class="teaser-try-label">Try:</span>
+      <button class="topic-pill chat-chip" data-q="What changed with CarMax this month?">What changed with CarMax this month?</button>
+      <button class="topic-pill chat-chip" data-q="Does AutoTrader have instant offers?">Does AutoTrader have instant offers?</button>
+      <button class="topic-pill chat-chip" data-q="Which competitors offer dealer-side sourcing?">Who offers dealer-side sourcing?</button>
+    </div>
+    <div class="teaser-key-sources"><b>Key sources:</b> Competitor news, Press, auto news, earnings, 10-Ks, job postings, forums</div>
+  </div>
+
+  <section>
+    <div class="section-head">
+      <h3>Trending topics</h3>
+      <div class="pill-row" data-filter-group id="topicsFilter">
+        <button class="pill active" data-cat="all">Everything</button>
+        <button class="pill" data-cat="consumer">Consumer</button>
+        <button class="pill" data-cat="dealer">Dealer</button>
+      </div>
+    </div>
+    <div class="topics-carousel">
+      <button class="topics-arrow" id="topicsArrowLeft" aria-label="Scroll topics left"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+      <div class="topics-row-wrap" id="topicsRowWrap"><div class="topics-row" id="topicsRow"></div></div>
+      <button class="topics-arrow" id="topicsArrowRight" aria-label="Scroll topics right"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg></button>
+    </div>
+  </section>
+
+  <section>
+        <div class="section-head">
+          <h3>Aggregated Themes</h3>
+        </div>
+        <div class="insight-list">
+
+          <div class="insight-card clickable" data-story="autotrader-sourcing">
+            <div class="ic-meta">
+              <span class="badge status-signal">Signal</span>
+              <span class="time">Oct 7, 2026</span>
+            </div>
+            <div>
+              <div class="comp-tag">Dealer sourcing</div>
+              <h4>AutoTrader is moving deeper into dealer sourcing.</h4>
+              <div class="impl-row"><span>This is becoming the #1 competitive battleground upstream of search — CarGurus has no acquisition-workflow candidate on the roadmap.</span></div>
+              <div class="ic-foot">
+                <span class="badge conf-high">High confidence</span>
+                <span class="sources-ct">🔗 4 sources</span>
+                <span class="link-arrow tell-me-more" style="margin-left:auto;" data-topic="AutoTrader is moving deeper into dealer sourcing">Tell me more →</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="insight-card clickable" data-story="carmax-pricing">
+            <div class="ic-meta">
+              <span class="badge status-developing">Developing</span>
+              <span class="time">Oct 7, 2026</span>
+            </div>
+            <div>
+              <div class="comp-tag">AI &amp; valuation</div>
+              <h4>The next pricing advantage might be under the hood.</h4>
+              <div class="impl-row"><span>Faster, inventory-level valuation could let CarMax underwrite seller offers before CarGurus routes a comparable lead.</span></div>
+              <div class="ic-foot">
+                <span class="badge conf-medium">Medium confidence</span>
+                <span class="sources-ct">🔗 5 sources</span>
+                <span class="link-arrow tell-me-more" style="margin-left:auto;" data-topic="The next pricing advantage might be under the hood">Tell me more →</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="insight-card clickable" data-story="carscom-conversational">
+            <div class="ic-meta">
+              <span class="badge status-developing">Developing</span>
+              <span class="time">Oct 7, 2026</span>
+            </div>
+            <div>
+              <div class="comp-tag">Consumer experience</div>
+              <h4>A more conversational way to find the next car.</h4>
+              <div class="impl-row"><span>Could reset consumer search expectations before CarGurus ships its own natural-language discovery.</span></div>
+              <div class="ic-foot">
+                <span class="badge conf-medium">Medium confidence</span>
+                <span class="sources-ct">🔗 3 sources</span>
+                <span class="link-arrow tell-me-more" style="margin-left:auto;" data-topic="A more conversational way to find the next car">Tell me more →</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="insight-card clickable" data-story="carscom-tradein">
+            <div class="ic-meta">
+              <span class="badge status-updated">Updated</span>
+              <span class="time">Oct 6, 2026</span>
+            </div>
+            <div>
+              <div class="comp-tag">Trade-in</div>
+              <h4>Trade-in moves closer to the shopping journey.</h4>
+              <div class="impl-row"><span>Trade-in-first flows are becoming table stakes, not a differentiator — worth re-scoping, not just tracking.</span></div>
+              <div class="ic-foot">
+                <span class="badge conf-high">High confidence</span>
+                <span class="sources-ct">🔗 2 sources</span>
+                <span class="link-arrow tell-me-more" style="margin-left:auto;" data-topic="Trade-in moves closer to the shopping journey">Tell me more →</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+  </section>
+
+  <div class="util-strip util-strip-single">
+    <div class="util-cell">
+      <button class="play-btn" id="playBtn" aria-label="Play audio briefing">▶</button>
+      <div>
+        <h4>This week in less than 60 seconds</h4>
+      </div>
+      <div class="time-right" id="audioTime">00:00 / ~00:48</div>
+    </div>
+  </div>
+
+  <section>
+    <div class="section-head">
+      <h3>Latest competitor &amp; industry news</h3>
+      <div class="pill-row" data-filter-group id="newsFilter">
+        <button class="pill active" data-cat="product">Product</button>
+        <button class="pill" data-cat="manda">M&amp;A</button>
+        <button class="pill" data-cat="corporate">Corporate</button>
+        <button class="pill" data-cat="commentary">Market Commentary</button>
+        <button class="pill" data-cat="all">All</button>
+      </div>
+    </div>
+    <div id="newsFeed"></div>
+  </section>
+
+  <section>
+    <div class="section-head"><h3>By the numbers</h3></div>
+    <div class="chart-grid">
+      <div class="chart-card">
+        <h4>Dealer rank, by competitor</h4>
+        <div class="chart-sub">Illustrative dealer-network ranking · 1 = strongest</div>
+        <div class="bars" id="barsChart"></div>
+        <button class="link-arrow tell-me-more" data-topic="Dealer rank, by competitor">Tell me more →</button>
+      </div>
+      <div class="chart-card">
+        <h4>Products launched, by competitor</h4>
+        <div class="chart-sub">Mocked counts per quarter · Q1–Q4 2026</div>
+        <div class="launch-chart" id="launchChart"></div>
+        <div class="launch-legend" id="launchLegend"></div>
+        <button class="link-arrow tell-me-more" data-topic="Products launched, by competitor">Tell me more →</button>
+      </div>
+      <div class="chart-card">
+        <h4>App data</h4>
+        <div class="chart-sub">Placeholder · real data coming soon</div>
+        <div class="launch-chart" id="appDataChart"></div>
+        <div class="launch-legend" id="appDataLegend"></div>
+        <button class="link-arrow tell-me-more" data-topic="App data">Tell me more →</button>
+      </div>
+      <div class="chart-card">
+        <h4>TBD</h4>
+        <div class="chart-sub">Fill in based on data</div>
+        <div class="chart-placeholder">TBD — fill in based on data</div>
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+    <div class="section-head"><h3>Sources</h3></div>
+    <div class="glossary-wrap">
+    <div class="glossary-grid">
+      <div class="glossary-card">
+        <div class="glossary-name">Competitor site</div>
+        <div class="glossary-desc">Direct product &amp; pricing page observation</div>
+        <div class="glossary-typical t-verified">Typically verified</div>
+      </div>
+      <div class="glossary-card">
+        <div class="glossary-name">Press &amp; news</div>
+        <div class="glossary-desc">Announcements, trade press, journalist coverage</div>
+        <div class="glossary-typical t-verified">Typically verified</div>
+      </div>
+      <div class="glossary-card">
+        <div class="glossary-name">Earnings &amp; 10-Ks</div>
+        <div class="glossary-desc">Public filings, investor calls, CFO remarks</div>
+        <div class="glossary-typical t-verified">Typically verified</div>
+      </div>
+      <div class="glossary-card">
+        <div class="glossary-name">Job postings</div>
+        <div class="glossary-desc">Careers sites &amp; job boards, read in aggregate</div>
+        <div class="glossary-typical t-signal">Typically signal</div>
+      </div>
+      <div class="glossary-card">
+        <div class="glossary-name">Dealer forums</div>
+        <div class="glossary-desc">DealerRefresh, Car Dealership Guy &amp; similar</div>
+        <div class="glossary-typical t-rumor">Typically rumor</div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+</div>
+
+<div class="tip-footer">
+  <div class="tip-footer-inner">
+    <div class="eyebrow accent">Confidential source</div>
+    <h3 class="serif">Share a tip</h3>
+    <p class="mbody">Saw something a competitor shipped, heard something in a dealer call, found a job posting that looks like a signal? The desk is listening — submissions aren't publicly attributed.</p>
+    <form id="tipFormInline">
+      <label>Name</label>
+      <input type="text" placeholder="Your name (optional)">
+      <label>What did you see?</label>
+      <textarea placeholder="Describe what you found — a screenshot, job posting, dealer quote, anything."></textarea>
+      <label>Source type</label>
+      <select><option>Product / website observation</option><option>Dealer conversation</option><option>Job posting / careers site</option><option>Public announcement</option><option>Other</option></select>
+      <label>Attach a screenshot (optional)</label>
+      <input type="file" accept="image/*">
+      <button type="submit" class="btn-primary" style="margin-top:12px;">Share tip →</button>
+      <div class="confirm-msg" id="tipInlineConfirm">✓ Tip received. The desk will follow up if validation is needed.</div>
+    </form>
+  </div>
+</div>
+</div>
+
+
+<!-- STORY MODAL -->
+<div class="modal-overlay" id="storyOverlay">
+  <div class="modal">
+    <button class="modal-close" id="storyClose">×</button>
+    <div class="eyebrow accent" id="mEyebrow">—</div>
+    <h3 class="serif" id="mTitle">—</h3>
+    <div class="mbody" id="mBody">—</div>
+    <div class="block-label">Then</div>
+    <div class="block-text" id="mThen">—</div>
+    <div class="block-label">Now</div>
+    <div class="block-text" id="mNow">—</div>
+    <div class="block-label">Why it matters</div>
+    <div class="block-text" id="mWhy">—</div>
+    <div class="block-label">Sources</div>
+    <div class="evidence-list" id="mSources"></div>
+  </div>
+</div>
+
+<!-- TIP MODAL -->
+<div class="modal-overlay" id="tipOverlay">
+  <div class="modal">
+    <button class="modal-close" id="tipClose">×</button>
+    <div class="eyebrow accent">Confidential source</div>
+    <h3 class="serif">Send it our way</h3>
+    <p class="mbody">Saw something a competitor shipped, heard something in a dealer call, found a job posting that looks like a signal? The desk is listening — submissions aren't publicly attributed.</p>
+    <form id="tipForm">
+      <label>Name</label>
+      <input type="text" placeholder="Your name (optional)">
+      <label>What did you see?</label>
+      <textarea placeholder="Describe what you found — a screenshot, job posting, dealer quote, anything."></textarea>
+      <label>Source type</label>
+      <select><option>Product / website observation</option><option>Dealer conversation</option><option>Job posting / careers site</option><option>Public announcement</option><option>Other</option></select>
+      <label>Attach a screenshot (optional)</label>
+      <input type="file" accept="image/*">
+      <button type="submit" class="btn-primary" style="margin-top:12px;">Submit tip →</button>
+      <div class="confirm-msg" id="tipConfirm">✓ Tip received. The desk will follow up if validation is needed.</div>
+    </form>
+  </div>
+</div>
+
+<!-- ALERTS MODAL -->
+<div class="modal-overlay" id="alertsOverlay">
+  <div class="modal">
+    <button class="modal-close" id="alertsClose">×</button>
+    <div class="eyebrow accent">Stay in the loop</div>
+    <h3 class="serif">Get alerts</h3>
+    <p class="mbody">We'll email you a recap of what the desk has flagged, on whatever cadence works for you.</p>
+    <form id="alertsForm">
+      <label>Email</label>
+      <input type="email" placeholder="you@cargurus.com" required>
+      <label>How often?</label>
+      <select>
+        <option value="weekly">Weekly</option>
+        <option value="monthly">Monthly</option>
+      </select>
+      <button type="submit" class="btn-primary" style="margin-top:12px;">Save alert →</button>
+      <div class="confirm-msg" id="alertsConfirm">✓ Alert saved. You're on the list.</div>
+    </form>
+  </div>
+</div>
+
+<!-- ASK THE DESK / SEARCH SIDEBAR (docked drawer, desktop) -->
+<aside class="chat-sidebar" id="chatSidebar">
+  <button class="chat-collapse-btn" id="chatCollapseBtn" title="Collapse — keep the conversation going">–</button>
+  <div class="chat-sidebar-head">
+    <h3 class="serif">Ask the Comp Intel Desk</h3>
+    <p>Stories, competitors, and capabilities.</p>
+  </div>
+  <div class="chat-transcript" id="chatTranscript"></div>
+  <div class="chat-quick-row" id="chatQuickRow">
+    <button class="topic-pill chat-chip" data-q="Does AutoTrader have instant offers?">Does AutoTrader have instant offers?</button>
+    <button class="topic-pill chat-chip" data-q="What changed with CarMax this month?">What changed with CarMax this month?</button>
+    <button class="topic-pill chat-chip" data-q="Which competitor is under the most pressure right now?">Most pressure right now?</button>
+  </div>
+  <div class="chat-input-row">
+    <input id="chatSearchInput" type="text" placeholder="Ask about any competitor or capability…">
+    <button class="chat-send-btn" id="chatSendBtn" aria-label="Send">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+    </button>
+  </div>
+</aside>
+<button class="chat-pill" id="chatPill">◆ Ask the Comp Intel Desk <span class="chat-pill-sub">— resume</span></button>
+<div class="cite-popover" id="citePopover"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
